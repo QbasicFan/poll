@@ -20,5 +20,7 @@ INSTALLED_APPS = (
   url("^poll/", include("poll.urls")),
 
 4) 
+
 python manage.py makemigrations poll
+
 python manage.py migrate poll
