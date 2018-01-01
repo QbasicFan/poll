@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div class="w3-content w3-padding" style="margin-top:120px">
+ <h1 class="w3-xxlarge">Pallette Picker</h1>
+
+{% for p in poll %}
+<b>{{ p.title }}</b>
+<h4 class="{{ p.menu }}">Menu</h4>
+<p class="{{ p.body }}">{{ p.body }}<br>{{ p.body }}<br>{{ p.body }}</p>
+<h4 class="{{ p.footer }}">Footer</h4>
+<a href="/poll/testPage/{{ p.id }}/">Test this pallette</a><br>
+<hr>
+{% endfor %}
+
+<a class="w3-button " href="/poll/newPoll/"> Creat a new pallette</a>
+
+</div>
+{% endblock %}
