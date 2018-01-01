@@ -24,3 +24,12 @@ INSTALLED_APPS = (
 python manage.py makemigrations poll
 
 python manage.py migrate poll
+
+
+==> call it 
+<a href="/poll/">test poll</a>
+
+*********
+warning wrapping block name is :
+{% block main %}
+{% endblock %}
