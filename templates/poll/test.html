@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div class="w3-content w3-padding" style="margin-top:120px">
+        <div class="w3-content">
+
+
+ <h1 class="w3-xxlarge">theme name : {{ poll.title }}</h1>
+    <h3 class="{{ poll.menu }}">Home | About | contact <span class="w3-small">{{ poll.menu }}</span></h3>
+        <div class="{{ poll.body }}" style="height:450px">
+            <div class="w3-container">
+            <i>{{ poll.body }}</i>
+            <div class-"w3-row">
+                <div class="w3-half">
+            <img src="http://4.bp.blogspot.com/-pQvqldEhZiY/UlpNlB-ckkI/AAAAAAAAYYQ/Xy3KDDcZJFc/s1600/tgifridays-new-stacked-burgers.jpg" style="width:200px;height:200px;"><br>
+            <img src="https://s-media-cache-ak0.pinimg.com/236x/64/56/6c/64566c28a9ccc66dde03b7e73d508336--dinosaur-denver.jpg" style="width:200px;height:200px;">
+
+                </div>
+                <div class="w3-half">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Gustaf_and_Marion_L._Sweet_House%3B_1951%3B_20_Balton_Road_Providence_RI_%281%29.jpg" style="width:200px;height:200px;"><br>
+            <img src="https://www.medicalmarijuanablog.com/wp-content/uploads/2017/03/ways-to-consume-medical-marijuana.jpg" style="width:200px;height:200px;">
+
+
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    <h3 class="{{ poll.footer }}">Footer <span class="w3-small">{{ poll.footer }}</span></h3>
+    </div>
+
+<h3 class="w3-pink">{{ poll.votes }}</h3>
+ <a href="/poll/">Back </a> -  <a href="/poll/vote/{{ poll.id }}/">+1 upVote </a> -- <a href="/poll/downVote/{{ poll.id }}/">-1 downVote </a>
+
+
+
+</div>
+{% endblock %}
